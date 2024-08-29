@@ -1,21 +1,7 @@
 <h1>Posts</h1>
 <p>log in to see the authors of posts.</p>
-<div id="login_form_container">
-  <%= form_with model: @user, local: true do |form|%>
-    <div class="field">
-      <%= form.label :username %>
-      <%= form.text_field :username %>
-    </div>
-    <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-    <div class="field">
-      <%= form.label :password %>
-      <%= form.password_field :password %>
-    </div>
-    <div class="actions">
-      <%= form.submit 'Update User' %>
-    </div>
-  <% end %>
-</div>
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <p><%= post.body %></p>
+<% end %>
+<%= link_to 'New Post', new_post_path %>
