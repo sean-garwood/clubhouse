@@ -43,7 +43,3 @@ edit/delete functionality
 1. Now add logic in your Index view to display the author’s name, but only if a user is signed in.
 1. Sign in and create a few secret posts.
 1. Test it out – sign out and go to the index page. You should see a list of the posts but no author names. Sign in and the author names should appear. Your secrets are safe!
-
-## Todo
-
-* consider creating a `Member::` namespace for signed-in users, then route according to [notes](../rails/notes.md#controller-namespaces)
